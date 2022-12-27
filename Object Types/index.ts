@@ -127,3 +127,50 @@ const arnold: HumanWithGun = {
 }
 
 console.log(arnold);
+
+// 7 - ReadOnlu array - nao é possivel alterar o conteudo ( apenas por metodos)
+
+let arr: ReadonlyArray<String> = ["coco","maca","mamao"];
+
+// arr[2] = "banana";
+
+arr = arr.map((item) => {
+    return `Fruta: ${item}`
+}) 
+
+console.log(arr);
+
+// 8 - Tuplas - determina a quantidade de item eos tipos de elementos
+
+type fiveNumber = [
+    number,
+    number,
+    number,
+    number,
+    number
+]
+
+const myNumber:fiveNumber = [
+    1,2,3,4,5
+];
+
+type NameAndAge = [string,number];
+
+const people:NameAndAge =["gabriel",120];
+
+people[0]="joao";
+// people[1]="joao";
+console.log(people);
+
+
+
+// 9 - Tuplas + readOnly = tipo de dado muito restrito
+
+function showNumber(numbers: readonly [number,number]) {
+    numbers.forEach(el => console.log(el));
+}
+
+showNumber([1,6])
+
+
+

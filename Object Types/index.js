@@ -50,3 +50,22 @@ const arnold = {
     caliber: 12
 };
 console.log(arnold);
+// 7 - ReadOnlu array - nao é possivel alterar o conteudo ( apenas por metodos)
+let arr = ["coco", "maca", "mamao"];
+// arr[2] = "banana";
+arr = arr.map((item) => {
+    return `Fruta: ${item}`;
+});
+console.log(arr);
+const myNumber = [
+    1, 2, 3, 4, 5
+];
+const people = ["gabriel", 120];
+people[0] = "joao";
+// people[1]="joao";
+console.log(people);
+// 9 - Tuplas + readOnly = tipo de dado muito restrito
+function showNumber(numbers) {
+    numbers.forEach(el => console.log(el));
+}
+showNumber([1, 6]);
