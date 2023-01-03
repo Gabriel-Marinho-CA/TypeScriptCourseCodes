@@ -1,0 +1,13 @@
+.footer {
+    margin-top: auto !important;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+
+    span {
+        font-weight: 600;
+        color: #61dafb;
+    }
+}
