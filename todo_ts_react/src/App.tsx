@@ -7,7 +7,7 @@ import Header from './components/subtemplates/Header';
 import TaskList from './components/main/TaskList';
 
 // CSS
-import styles from "./scss/main/main.module.css";
+import styles from "./scss/main.module.css";
 
 // Interfaces
 

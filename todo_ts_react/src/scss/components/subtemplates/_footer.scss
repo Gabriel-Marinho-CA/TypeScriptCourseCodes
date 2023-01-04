@@ -1,13 +1,13 @@
 .footer {
     margin-top: auto;
     height: 200px;
-    background-color: $black--main-color;
+    background-color:$black--main-color;
 
     @include allCenter;
 
     span {
         font-weight: 600;
-        color: $blue--main-color;
+        color:$blue--main-color;
     }
 
     @media screen and (max-width:547px) {

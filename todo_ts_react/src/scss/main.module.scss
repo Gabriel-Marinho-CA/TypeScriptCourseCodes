@@ -1,0 +1,24 @@
+// MIXINS
+@import "./helpers/mixins";
+
+// VARIABLES
+@import "./helpers/colors";
+
+// COMPONENTS
+@import "./components/subtemplates/footer";
+@import "./components/subtemplates/header";
+@import "./components/templates/form";
+@import "./components/templates/task";
+@import "./components/templates/modal";
+
+
+
+.main {
+    text-align: center;
+    padding: 2rem;
+    margin: auto 0;
+
+    h2 {
+        margin-bottom: 0.8em;
+    }
+}
