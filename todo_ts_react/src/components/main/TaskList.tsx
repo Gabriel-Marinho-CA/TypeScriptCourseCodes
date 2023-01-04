@@ -1,14 +1,15 @@
 import React from 'react'
 import { ITask } from '../../interfaces/Task';
 
-type Props = {
+interface Props {
     taskList: ITask[],
     taskAreaClass: any,
     details: any,
     actions: any,
-    handleDelete(id: number): void
+    handleDelete(id: number): void,
+    handleEdit(task: ITask): void
 }
-// className ={taskAreaClass}
+
 
 const TaskList = (
     {
@@ -16,7 +17,8 @@ const TaskList = (
         taskAreaClass,
         details,
         actions,
-        handleDelete
+        handleDelete,
+        handleEdit
     }
         : Props) => {
 
@@ -35,9 +37,11 @@ const TaskList = (
                                     }</p>
                                 </div>
                                 <div className={actions}>
-                                    <i className="bi bi-pencil"></i>
-                                    <i 
-                                        onClick={()=> {handleDelete(task.id)}}
+                                    <i
+                                        onClick={() => handleEdit(task)}
+                                        className="bi bi-pencil"></i>
+                                    <i
+                                        onClick={() => { handleDelete(task.id) }}
                                         className="bi bi-trash"></i>
                                 </div>
                             </div>
@@ -45,7 +49,7 @@ const TaskList = (
                     })
                 )
                 :
-                (<p>Nao tem tareface</p>)
+                (<p>Nao tem tarefas</p>)
             }
         </>
     )

@@ -1,0 +1,37 @@
+
+.taskAreaClass {
+    max-width: 400px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+    @include allCenter(center, space-between);
+
+    .details {
+        text-align: left;
+
+        h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .actions {
+
+        @include allCenter(center, initial);
+        flex-direction: column;
+
+
+        i {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            background-color: $black--main-color;
+            color: #fff;
+            padding: .4rem;
+
+            &:hover {
+                color: $blue--main-color;
+            }
+        }
+    }
+}

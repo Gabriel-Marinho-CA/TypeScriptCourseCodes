@@ -1,0 +1,191 @@
+.footer {
+  margin-top: auto;
+  height: 200px;
+  background-color: #282c34;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer span {
+  font-weight: 600;
+  color: #61dafb;
+}
+
+@media screen and (max-width: 547px) {
+  .footer {
+    height: 100px;
+  }
+}
+
+.header {
+  background-color: #282c34;
+  color: #61dafb;
+  text-align: center;
+  padding: 1rem;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  border: none;
+}
+
+.form div label {
+  font-weight: 600;
+  margin-bottom: 0.4em;
+}
+
+.form div input {
+  padding: 8px 15px;
+  margin-bottom: 1.5rem;
+  border-radius: 0;
+  border: 1px solid #282c34;
+}
+
+.form div input[type="submit"] {
+  background-color: #61dafb;
+  border: 1px solid #61dafb;
+  color: #000;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 6px;
+}
+
+.form div input[type="submit"]:hover {
+  background-color: #fff;
+  border-color: #282c34;
+}
+
+.taskAreaClass {
+  max-width: 400px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.taskAreaClass .details {
+  text-align: left;
+}
+
+.taskAreaClass .details h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.taskAreaClass .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.taskAreaClass .actions i {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #282c34;
+  color: #fff;
+  padding: .4rem;
+}
+
+.taskAreaClass .actions i:hover {
+  color: #61dafb;
+}
+
+.fade {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.3;
+}
+
+.modal {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 500px;
+  height: 400px;
+  z-index: 1;
+  background-color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+}
+
+.modal form {
+  width: 90%;
+}
+
+.main {
+  text-align: center;
+  padding: 2rem;
+  margin: auto 0;
+}
+
+.main h2 {
+  margin-bottom: 0.8em;
+}
+/*# sourceMappingURL=main.module.css.map */

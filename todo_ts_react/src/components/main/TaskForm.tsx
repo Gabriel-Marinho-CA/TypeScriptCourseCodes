@@ -3,37 +3,52 @@ import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 // Interfaces
 import { ITask } from '../../interfaces/Task';
 
-type Props = {
+interface Props {
   btnText: string,
   formClass: any,
   taskList: ITask[],
   setTaskList?: React.Dispatch<React.SetStateAction<ITask[]>>
+  task?: ITask | null;
+  handleUpdate?(id: number, title: string, difficult: number | string): void
 }
 
-const TaskForm = ({ btnText, formClass, taskList,setTaskList }: Props) => {
+const TaskForm = ({
+  btnText,
+  formClass,
+  taskList,
+  setTaskList,
+  task,
+  handleUpdate
+}: Props) => {
 
   const [id, setId] = useState<number>(0)
   const [title, settitle] = useState<string>("")
-  const [difficult, setDifficult] = useState<number>(0)
+  const [difficult, setDifficult] = useState<number | string>(0)
 
   const addTaskHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const id = Math.floor(Math.random()*1000);
+    if (handleUpdate) {
 
-    const newTask:ITask = {id,title,difficult};
+      handleUpdate(id, title, difficult);
 
-    setTaskList!([...taskList, newTask]);
+    } else {
 
-    settitle("");
-    setDifficult(0);
+      const id = Math.floor(Math.random() * 1000);
 
-    console.log(taskList);
-    
+      const newTask: ITask = { id, title, difficult };
+
+      setTaskList!([...taskList, newTask]);
+
+      settitle("");
+      setDifficult(0);
+    }
 
   }
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+
+    // if(Number(isNaN(parseInt(e.target.value)))) ;
 
     if (e.target.name === "title") {
       settitle(e.target.value);
@@ -41,6 +56,14 @@ const TaskForm = ({ btnText, formClass, taskList,setTaskList }: Props) => {
       setDifficult(parseInt(e.target.value));
     }
   }
+
+  useEffect(() => {
+    if (task) {
+      setId(task.id);
+      settitle(task.title);
+      setDifficult(task.difficult);
+    }
+  }, [task])
 
 
   return (
